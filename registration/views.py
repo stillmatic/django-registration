@@ -74,7 +74,7 @@ class RegistrationView(_RequestPassingFormView):
     form_class = REGISTRATION_FORM
     http_method_names = ['get', 'post', 'head', 'options', 'trace']
     success_url = None
-    template_name = 'registration/registration_form.html'
+    template_name = 'registration/registration_form.jade'
 
     @method_decorator(sensitive_post_parameters('password1', 'password2'))
     def dispatch(self, request, *args, **kwargs):
@@ -124,7 +124,7 @@ class ActivationView(TemplateView):
 
     """
     http_method_names = ['get']
-    template_name = 'registration/activate.html'
+    template_name = 'registration/activate.jade'
 
     def get(self, request, *args, **kwargs):
         activated_user = self.activate(request, *args, **kwargs)

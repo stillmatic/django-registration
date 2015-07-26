@@ -1,0 +1,16 @@
+extends registration_base
+| {% load i18n %}
+
+block title
+	| Activation email sent
+
+block content
+	p Please check your email to complete the registration process.
+
+//-
+	**registration/registration_complete.html**
+
+	Used after successful completion of the registration form. This
+	template has no context variables of its own, and should simply inform
+	the user that an email containing account-activation information has
+	been sent.

@@ -28,10 +28,10 @@ from .views import RegistrationView
 
 urlpatterns = patterns('',
                        url(r'^register/closed/$',
-                           TemplateView.as_view(template_name='registration/registration_closed.html'),
+                           TemplateView.as_view(template_name='registration/registration_closed.jade'),
                            name='registration_disallowed'),
                        url(r'^register/complete/$',
-                           TemplateView.as_view(template_name='registration/registration_complete.html'),
+                           TemplateView.as_view(template_name='registration/registration_complete.jade'),
                            name='registration_complete'),
                        )
 
